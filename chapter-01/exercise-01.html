@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning AngularJs Animation</title>
+    <style type="text/css">
+        #animateElement {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- visual elements -->
+    <div id="animateElement"></div>
+    <button id="animateButton">Animate</button>
+
+    <!-- add the script at the end to make sure all DOM elements are loaded -->
+    <script type="text/javascript">
+        
+        // find and cache the DOM elements
+        var animateButton = document.getElementById('animateButton');
+
+        // animate the element
+        var animate = function() {
+            var element = document.getElementById('animateElement');
+            var start = null;
+
+            function step(timestamp) {
+                if (!start) {
+                    start = timestamp;
+                }
+
+                var progress = timestamp - start;
+                element.style.left = Math.min(progress/10, 100) + "px";
+                if (progress < 2000) {
+                    window.requestAnimationFrame(step);
+                }
+            }
+
+            window.requestAnimationFrame(step);
+        };
+
+        // add event listener to the animate button
+        animateButton.addEventListener('click', animate);
+
+    </script>
+</body> 
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning AngularJs Animation</title>
+    <style type="text/css">
+        /*targeting Chrome*/
+        .e1 {
+            display: inline-block;
+
+            animation-name: loading-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: reverse;
+        }
+
+        @keyframes loading-animation {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 2: Execise 04</h1>
+    <p class="spec">
+        Create the same animation as the one in exercise 2 but in the reverse order.
+        Ex2: Create a loading animation using transform:rotate and CSS animations.
+    </p>
+
+    <!-- visual elements -->
+    <div>
+        <i class="e1">|</i>
+    </div>
+</body> 
+</html>

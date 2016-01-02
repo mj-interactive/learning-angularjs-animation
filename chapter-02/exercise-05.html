@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning AngularJs Animation</title>
+    <style type="text/css">
+        /*targeting Chrome*/
+        .ball {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .green {
+            background-color: green;
+        }
+        .red {
+            background-color: red;
+        }
+
+        .asymmetric-animation {
+            animation-name: asymmetric-animation;
+            animation-timing-function: ease;
+        }
+        .linear-animation {
+            animation-name: linear-animation;
+            animation-timing-function: linear;
+        }
+        .constant-animation {
+            animation-name: constant-animation;
+        }
+        .changing-animation {
+            animation-name: changing-animation;
+        }
+
+        @keyframes asymmetric-animation {
+            0% {
+                transform: translateX(0);
+            }
+            33% {
+                transform: translateX(200px);
+            }
+            66% {
+                transform: translateX(200px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        @keyframes linear-animation {
+            0% {
+                transform: translateX(0);
+            }
+            33% {
+                transform: translateX(200px);
+            }
+            66% {
+                transform: translateX(200px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        @keyframes constant-animation {
+            0% {
+                transform: translateX(-60px);
+                animation-timing-function: ease;
+            }
+            33% {
+                transform: translateX(200px);
+            }
+            66% {
+                transform: translateX(200px);
+                animation-timing-function: ease;
+            }
+            100% {
+                transform: translateX(-60px);
+            }
+        }
+        @keyframes changing-animation {
+            0% {
+                transform: translateX(-60px);
+                animation-timing-function: ease-in;
+            }
+            33% {
+                transform: translateX(200px);
+            }
+            66% {
+                transform: translateX(200px);
+                animation-timing-function: ease-out;
+            }
+            100% {
+                transform: translateX(-60px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 2: Execise 05</h1>
+    <p class="spec">
+        Create two animations similar to the animations in the guidelines of Google 
+        Material Design described at http://www.google.com/design/spec/ animation/authentic-motion.html
+    </p>
+
+    <!-- visual elements -->
+    <h2>Mass and weight</h2>
+
+    <h3>Asymmetric (Preferred)</h3>
+    <i class="ball green asymmetric-animation"></i>
+
+    <h3>Linear (Not Preferred)</h3>
+    <i class="ball red linear-animation"></i>
+
+    <h2>Entrances and exits</h2>
+
+    <h3>Near-constant (Preferred)</h3>
+    <i class="ball green constant-animation"></i>
+
+    <h3>Changing (Not Preferred)</h3>
+    <i class="ball red changing-animation"></i>
+
+</body> 
+</html>

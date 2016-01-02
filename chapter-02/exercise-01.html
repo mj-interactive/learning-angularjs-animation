@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning AngularJs Animation</title>
+    <style type="text/css">
+        /*targeting Chrome*/
+        .e1,
+        .e2,
+        .e3 {
+            display: inline-block;
+            float: left;
+            height: 20px;
+            width: 20px;
+            margin-right: 5px;
+            background-color: black;
+            border-radius: 50%;
+
+            animation-name: loading-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        .e2 {
+            -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
+        }
+        .e3 {
+            -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes loading-animation {
+            0% {
+                transform: scale(0);
+            }
+            33% {
+                transform: scale(1);
+            }
+            66% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 1: Execise 01</h1>
+    <p class="spec">
+        Create one simple loading animation using three div elements that contain an animation. Each one should be filled by a black background color that 
+        increases the size from 0 to 20 px in height and width in a sequence. So, the first animation starts first, the second has a longer delay than the  
+        first one, and the third has more delay than the second one in an infinite loop.
+    </p>
+
+    <!-- visual elements -->
+    <div>
+        <i class="e1"></i>
+        <i class="e2"></i>
+        <i class="e3"></i>
+    </div>
+</body> 
+</html>

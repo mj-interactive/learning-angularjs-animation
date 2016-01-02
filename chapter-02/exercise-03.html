@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning AngularJs Animation</title>
+    <style type="text/css">
+        /*targeting Chrome*/
+        .ball {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: gray;
+
+            animation-name: loading-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            /*animation-timing-function: linear;*/
+        }
+
+        @keyframes loading-animation {
+            0% {
+                transform: translateX(0);
+            }
+            33% {
+                transform: translateX(100px);
+            }
+            66% {
+                transform: translateX(50px);
+            }
+            100% {
+                transform: translateX(200px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Chapter 2: Execise 03</h1>
+    <p class="spec">
+        Create an animation of a ball image or a circle that goes 100px to the right, gets
+back 50 px to the left, and goes 150 px to the right - all in a single animation.
+    </p>
+
+    <!-- visual elements -->
+    <i class="ball"></i>
+</body> 
+</html>

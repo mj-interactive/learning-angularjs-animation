@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Learning AngularJs Animation</title>
+    <style type="text/css">
+        .ng-animation {
+            display: inline-block;
+
+            animation-name: loading-animation;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        .ng-animation.ng-hide {
+            animation: none;
+        }
+        @keyframes loading-animation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chapter 3: Execise 01</h1>
+
+    <p class="spec">
+        Create a spinning loading animation using the ngShow or ngHide directives that appears when the scope controller variable, $scope.isLoading, is equal to true.
+    </p>
+
+    <!-- visual elements -->
+    <div>
+        <h1>ngShow animation</h1>
+        <div>
+            <button ng-click="isLoading =!isLoading">Load</button>
+            isLoading value: {{isLoading}}
+        </div>
+
+        <i class="ng-animation" ng-show="isLoading">|</i>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-animate.min.js"></script>
+    <script>
+        var app = angular.module('myApp', ['ngAnimate']);
+    </script>
+</body>
+</html>
